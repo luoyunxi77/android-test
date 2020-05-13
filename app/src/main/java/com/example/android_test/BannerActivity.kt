@@ -13,7 +13,7 @@ class BannerActivity : AppCompatActivity() {
 
         banner_detail.setOnClickListener {
             val intent = Intent()
-            intent.putExtra("Result", "奥秘不得而知")
+            intent.putExtra("Result", banner_detail.text)
             setResult(8888, intent)
             finish()
         }
