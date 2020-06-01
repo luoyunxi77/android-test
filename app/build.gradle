@@ -23,6 +23,20 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+        ignoreWarnings true
+        checkAllWarnings false
+        textOutput 'stdout'
+        xmlReport false
+        xmlOutput file("M10-lint-report.xml")
+        htmlReport true
+        htmlOutput file("M10-lint-report.html")
+        fatal 'NewApi', 'InlinedApi'
+        error 'Wakelock', 'TextViewEdits'
+        warning 'ResourceAsColor'
+    }
+
 }
 
 dependencies {
